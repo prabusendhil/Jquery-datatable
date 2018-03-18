@@ -1,0 +1,4 @@
+https://datatables.net/examples/data_sources/js_array.html
+https://datatables.net/examples/styling/bootstrap.html
+https://datatables.net/forums/discussion/32107/how-to-load-an-array-of-json-objects-to-datatables
+https://datatables.net/examples/ajax/custom_data_flat.html
