@@ -216,6 +216,11 @@ var aDemoItems = [
     document.getElementsByTagName('body')[0].style.background="lightgrey" ;  
 	document.getElementById('head').style.textAlign='center';
 })
+
+    function getValue(id){
+        alert("The Patient Id is : "+id)
+    }
+
     function getDynamicData(){
 
 
@@ -247,12 +252,18 @@ var aDemoItems = [
 	var tbody = document.createElement('tbody');
 		table.appendChild(tbody);
 	for(var i=0; i<aDemoItems.length; i++){
-		var tr = tbody.insertRow(-1);		
-		tr.setAttribute('onclick','getValue('+aDemoItems[i]+')')
-		for(var j=0; j<h.length; j++){
+		var tr = tbody.insertRow(-1);
+        for(var j=0; j<h.length; j++){
 		var td  = document.createElement('td');
+        
 		td.innerHTML = aDemoItems[i][h[j]] ;
-		
+		if(h[j] == "patientId")
+        {
+
+        td.setAttribute('onclick',"getValue("+aDemoItems[i].patientId+")") ;
+        td.style.color="blue";
+        td.style.cursor="pointer";
+        }
 		tr.appendChild(td)
 
 		}
